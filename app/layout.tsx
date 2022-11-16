@@ -1,5 +1,14 @@
 import './globals.css'
 
+import Typography from 'typography'
+
+// require to dodge missing types error
+const { TypographyStyle } = require('react-typography');
+
+import { typography } from './utils/typography'
+
+import styles from './layout.module.css';
+
 export default function RootLayout({
   children,
 }: {
@@ -7,12 +16,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
+      <head>
+        <TypographyStyle typography={typography} />
+      </head>
+      <body>
+        <div className={styles.container}>
+          <main className={styles.main}>
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   )
 }
