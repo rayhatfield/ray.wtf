@@ -18,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <TypographyStyle typography={typography} />
+        <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/704534/7134372/css/fonts.css" />
       </head>
       <body>
         <div className={styles.container}>
