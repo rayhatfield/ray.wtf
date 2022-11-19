@@ -5,8 +5,8 @@ import cx from 'clsx';
 
 import styles from './section.module.css';
 
-function useIntersectionObserver(callback) {
-    const ref = useRef();
+function useIntersectionObserver(callback: (entry: IntersectionObserverEntry) => void) {
+    const ref = useRef(null);
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(e => {
@@ -25,13 +25,17 @@ function useIntersectionObserver(callback) {
     return ref;
 }
 
-export function Section(props) {
-    const [intersecting, setIntersecting] = useState();
+export function Section(props: object) {
+    const [intersecting, setIntersecting] = useState(false);
     const ref = useIntersectionObserver((entry) => {
         console.log(entry.intersectionRatio);
         setIntersecting(entry.isIntersecting)
     });
     return (
-        <section ref={ref} {...props} className={cx(styles.container, { [styles.intersecting]: intersecting })} />
+        <section
+            ref={ref}
+            {...props}
+            className={cx(styles.container, { [styles.intersecting]: intersecting })}
+        />
     );
 }
