@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <p>nothing to see here.</p>
-        <p>sometimes i <a href="https://twitter.com/rayhatfield">tweet</a>.</p>
+        <p>i‘m <a href="https://bsky.app/profile/ray.wtf">@ray.wtf</a> on bluesky.</p>
         <p>i’m <a rel="me" href="https://mastodon.social/@rayhatfield">on mastodon</a> too.</p>
       </main>
     </>
