@@ -16,7 +16,7 @@ export default function Home() {
         <p>nothing to see here.</p>
         <p>i‘m <a href="https://bsky.app/profile/ray.wtf">@ray.wtf</a> on bluesky.</p>
         <p>i‘m <a href="https://github.com/rayhatfield">on github too</a>.</p>
-        <p><a href="https://ko-fi.com/rayhatfield">Buy me a coffee</a>. If you want to. I'm not your mom.</p>
+        <p><a href="https://ko-fi.com/rayhatfield">Buy me a coffee</a>. If you want to. I‘m not your mom.</p>
       </main>
     </>
   )
